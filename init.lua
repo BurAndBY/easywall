@@ -1273,50 +1273,56 @@ config.actions = {
         if try_capture_key("Up") then
             return
         end
-        settings_nav_up()
+        return settings_nav_up()
     end,
     ["Down"] = function()
         if try_capture_key("Down") then
             return
         end
-        settings_nav_down()
+        return settings_nav_down()
     end,
     ["Prior"] = function()
         if try_capture_key("Prior") then
             return
         end
-        settings_nav_page_up()
+        return settings_nav_page_up()
     end,
     ["Next"] = function()
         if try_capture_key("Next") then
             return
         end
-        settings_nav_page_down()
+        return settings_nav_page_down()
     end,
     ["Page_Up"] = function()
         if try_capture_key("Page_Up") then
             return
         end
-        settings_nav_page_up()
+        return settings_nav_page_up()
     end,
     ["Page_Down"] = function()
         if try_capture_key("Page_Down") then
             return
         end
-        settings_nav_page_down()
+        return settings_nav_page_down()
     end,
     ["Left"] = function()
         if try_capture_key("Left") then
             return
         end
-        settings_dec()
+        local changed = settings_dec()
+        if changed == false then
+            return false
+        end
         repeat_while_held("LEFT", settings_dec)
     end,
     ["Right"] = function()
         if try_capture_key("Right") then
             return
         end
-        settings_inc()
+        local changed = settings_inc()
+        if changed == false then
+            return false
+        end
         repeat_while_held("RIGHT", settings_inc)
     end,
     ["Tab"] = function()

@@ -16,7 +16,7 @@ return {
     thin = "N",
     wide = "M",
     tall = "B",
-    toggle_ninbot = "grave",
+    toggle_ninbot = "backslash",
     launch_paceman = "Shift-P",
     fullscreen = "Shift-O",
     toggle_remaps = "Insert",
@@ -28,7 +28,7 @@ return {
   input = {
     layout = "mc",
     options = "caps:none",
-    repeat_rate = 40,
+    repeat_rate = 20,
     repeat_delay = 120,
     confine_pointer = false,
     sensitivity_normal = 3,
